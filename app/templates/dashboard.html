@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">📊 Dashboard Overview</h2>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card p-3 text-center">
+            <h5>Articles</h5>
+            <div class="kpi">{{ total_articles }}</div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card p-3 text-center">
+            <h5>Total Stock</h5>
+            <div class="kpi">{{ total_stock }}</div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card p-3 text-center">
+            <h5>Entries</h5>
+            <div class="kpi text-success">{{ entries }}</div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card p-3 text-center">
+            <h5>Exits</h5>
+            <div class="kpi text-danger">{{ exits }}</div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
