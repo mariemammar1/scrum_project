@@ -5,7 +5,7 @@ from models import db
 from flask_jwt_extended import JWTManager
 
 from auth import auth_bp
-
+from admin import admin_bp
 
 
 app = Flask(__name__)
@@ -16,7 +16,7 @@ JWTManager(app)
 
 # Blueprints
 app.register_blueprint(auth_bp, url_prefix="/auth")
-
+app.register_blueprint(admin_bp, url_prefix="/admin")
 with app.app_context():
     db.create_all()
 
